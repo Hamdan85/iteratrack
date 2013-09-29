@@ -3,8 +3,8 @@ class CreatePeople < ActiveRecord::Migration
     create_table :people do |t|
       t.string :name
       t.string :email
-      t.string :phone
-      t.string :type
+      t.integer :phone
+      t.string :typeuser
 
       t.timestamps
     end

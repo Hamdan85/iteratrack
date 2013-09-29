@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+    @person = Person.new
   end
 
   # GET /people/1
@@ -15,6 +15,7 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
+
   end
 
   # GET /people/1/edit
@@ -24,7 +25,10 @@ class PeopleController < ApplicationController
   # POST /people
   # POST /people.json
   def create
+
     @person = Person.new(person_params)
+
+    puts @person
 
     respond_to do |format|
       if @person.save
@@ -69,6 +73,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :email, :phone, :type)
+      params.require(:person).permit(:name, :email, :phonusere, :typeuser)
     end
 end

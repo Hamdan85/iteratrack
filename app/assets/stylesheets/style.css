@@ -100,8 +100,12 @@ header h2{
     font-family: 'Lato-Light', sans-serif;
     font-size: 0.8em;
 }
-.formulario input{
+
+.formulario input[type="text"] {
     width: 300px;
+}
+.formulario input{
+
     margin:10px 0;
     height: 22px;
     padding-left: 2px;
@@ -112,10 +116,11 @@ header h2{
 }
 .formulario .enviar{
     position: relative;
-    width:100px;
+    right: 0px;
+    width:300px;
     border-radius:0px;
     top: 0px;
-    left: 15px;
+
 }
 .formulario img{
     position: absolute;
@@ -129,6 +134,10 @@ header h2{
     top: -7px;
     margin-right: 10px;
     font-family: 'Lato-Light',sans-serif;
+}
+.formulario .sendline {
+    display: inline-block;
+    width: 307px;
 }
 .radio{
     width:20px !important;

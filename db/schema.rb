@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20130929042120) do
   create_table "people", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "phone"
-    t.string   "type"
+    t.integer  "phone"
+    t.string   "typeuser"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

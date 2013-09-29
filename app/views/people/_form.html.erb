@@ -13,12 +13,13 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.text_field :type, :style => 'visibility: hidden; position: absolute', :id => 'escondido' %><br />
+
+    <%= f.radio_button :typeuser, 'Investidor', :checked => true %>
+    <%= f.label :typeuser, "Investidor" %>
+    <%= f.radio_button :typeuser, 'Startup/Empreendedor', :checked => false %>
+    <%= f.label :type, "Startup" %>
   </div>
-    <label for="investidor" class="maior">Investidor</label>
-    <input id="investidor" name="tipo" type="radio" class="radio" id="invest">
-    <label class="maior" for="startup">Startup</label>
-    <input id="startup" name="tipo" class="radio" type="radio" id="start">
+
     <%= f.submit 'ENVIAR', :class => 'a enviar' %>
 <% end %>
 
