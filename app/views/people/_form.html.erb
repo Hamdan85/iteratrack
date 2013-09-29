@@ -15,9 +15,9 @@
   <div class="field">
 
     <%= f.radio_button :typeuser, 'Investidor', :checked => true %>
-    <%= f.label :typeuser, "Investidor" %>
+    <%= f.label :typeuser, "Investidor", :class => 'maior' %>
     <%= f.radio_button :typeuser, 'Startup/Empreendedor', :checked => false %>
-    <%= f.label :type, "Startup" %>
+    <%= f.label :type, "Startup/Empreendedor", :class => 'maior' %>
   </div>
 
     <%= f.submit 'ENVIAR', :class => 'a enviar' %>
