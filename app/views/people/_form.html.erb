@@ -1,0 +1,35 @@
+<%= form_for(@person) do |f| %>
+
+  <div class="field">
+    <label>NOME:</label><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <label>E-MAIL:</label><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <label>TELEFONE:</label><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.text_field :type, :style => 'visibility: hidden; position: absolute', :id => 'escondido' %><br />
+  </div>
+    <label for="investidor" class="maior">Investidor</label>
+    <input id="investidor" name="tipo" type="radio" class="radio" id="invest">
+    <label class="maior" for="startup">Startup</label>
+    <input id="startup" name="tipo" class="radio" type="radio" id="start">
+    <%= f.submit 'ENVIAR', :class => 'a enviar' %>
+<% end %>
+
+<% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+        <% @person.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
